@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#card {
+    padding: 48px 40px 36px;
+    width: 450px;
+}
+
+#google-logo {
+    width: 75px;
+}
+
+#password-title,
+#login-title {
+    font-size: 24px;
+}
+
+#login-sub-title {
+    font-size: 16px;
+}
+
+#floatingInputEmail:focus,
+#floatingInputPassword:focus {
+    border: solid 2px rgb(26, 115, 232) !important;
+}
+
+#floatingLabel {
+    color: rgb(95, 99, 104);
+}
+
+#login-info {
+    font-size: 14px;
+    color: rgb(95,99,104);
+}
+
+#password-sumbit-button,
+#password-recover-button,
+#login-recover-button,
+#login-info-button,
+#login-create-button,
+#login-submit-button {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.30px;
+}
+
+#password-label-check,
+#password-info,
+#password-email {
+    font-size: 14px;
+}
+
+#password-email {
+    color: rgb(60, 64, 67);
+    font-weight: 500;
+    letter-spacing: .25px;
+}
+
+#password-user {
+    width: 18px;
+}
+
+@media (max-width: 576px) {
+    #card-container {
+        align-items: start !important;
+    }
+
+    #card {
+        border: none !important;
+    }
+}

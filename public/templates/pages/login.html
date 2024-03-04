@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}Inicia sesión: Cuentas de Google{% endblock %}
+
+{% block customCSS %}<link rel="stylesheet" href="/static/css/login.css">{% endblock %}
+{% block customJS %}<script src="/static/js/login.js"></script>{% endblock %}
+
+{% block body %}
+    <main class="vh-100">
+        <section id="card-container" class="h-100 d-flex justify-content-center align-items-center">
+            <div id="card" class="card border">
+                <img id="google-logo" class="mx-auto" src="/static/images/logo.png">
+                <div id="email-content">
+                    <span id="login-title" class="d-block text-center mb-2">Inicia sesión</span>
+                    <span id="login-sub-title" class="d-block text-center mb-4">Utiliza tu cuenta de Google</span>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control shadow-none" id="floatingInputEmail" placeholder="">
+                        <label id="floatingLabel" class="floatingInput" for="floatingInputEmail">Correo electrónico o teléfono</label>
+                    </div>
+                    <div>
+                        <a id="login-recover-button" class="text-decoration-none" href="#" onclick="redirect('loginRecover')">¿Has olvidado tu correo electrónico?</a>
+                    </div>
+                    <div id="login-info" class="mt-5">
+                        <span class="d-block">¿No es tu ordenador? Usa el modo Invitado para iniciar sesión de forma privada.</span>
+                        <a id="login-info-button" class="text-decoration-none" href="#" onclick="redirect('loginInformation')">Más información sobre cómo usar el modo Invitado</a>
+                    </div>
+                    <div class="row mt-5 mb-3">
+                        <div class="col-6 d-flex align-items-center">
+                            <a id="login-create-button" class="float-start text-decoration-none" href="#" onclick="redirect('loginCreate')">Crear cuenta</a>
+                        </div>
+                        <div class="col-6">
+                            <button id="login-submit-button" class="float-end btn btn-primary px-4 py-2" type="button" disabled>Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="password-content" class="d-none">
+                    <span id="password-title" class="d-block text-center mb-2">Ingrese la contaseña</span>
+                    <div class="d-flex justify-content-center">
+                        <div class="d-inline-block border rounded-pill py-1 px-2 mb-4">
+                            <img id="password-user" src="/static/images/user.png" class="mx-auto">
+                            <span id="password-email">seba@gmail.com</span>
+                        </div>
+                    </div>
+                    <span id="password-info" class="d-block mb-5">Debes verificar que eres tú para poder continuar</span>
+                    <div class="form-floating mb-2">
+                        <input type="password" class="form-control shadow-none" id="floatingInputPassword" placeholder="test@gmail.com">
+                        <label id="floatingLabel" class="floatingInput" for="floatingInputPassword">Introduce tu contraseña</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input shadow-none rounded-1" type="checkbox" value="" id="flexCheckDefault">
+                        <label id="password-label-check"  class="check form-check-label" for="flexCheckDefault">Mostrar contraseña</label>
+                    </div>
+                    <div class="row mt-5 mb-3">
+                        <div class="col-8 d-flex align-items-center">
+                            <a id="password-recover-button" class="float-start text-decoration-none" href="#" onclick="redirect('passwordRecover')">¿Has olvidado tu contraseña?</a>
+                        </div>
+                        <div class="col-4">
+                            <button id="password-sumbit-button" class="px-4 py-2 btn btn-primary float-end" type="button" disabled>Siguiente</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
